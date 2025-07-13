@@ -24,7 +24,7 @@
             display: block; /* Removes any inline spacing issues */
         }
 
-```
+
     /* Specific sizes for different sections */
     .memoji-hero img {
         max-width: 250px;
@@ -42,7 +42,7 @@
         max-width: 150px;
     }
 
-    /* Ensure parent containers don't add boxes */
+    /* Ensure parent containers don't add boxes but maintain centering */
     .memoji-hero,
     .work-memoji,
     .about-memoji,
@@ -51,11 +51,13 @@
         outline: none !important;
         box-shadow: none !important;
         background: transparent !important;
-        padding: 0;
-        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 </style>
-```
+
 
 </head>
 <body>
@@ -73,7 +75,7 @@
         </div>
     </section>
 
-```
+
 <!-- Work Experience -->
 <section class="work-section">
     <div class="container">
@@ -210,7 +212,7 @@
 </footer>
 
 <script src="script.js"></script>
-```
+
 
 </body>
 </html>
