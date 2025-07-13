@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,35 +7,56 @@
     <title>11luke | Developer</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Add this to your style.css or keep it here */
+        /* Remove any boxes/borders from Memoji images */
         .memoji-hero img,
         .work-memoji img,
         .about-memoji img,
         .contact-memoji img {
             width: 100%;
             height: auto;
-            max-width: 200px; /* Adjust this value as needed */
-            border-radius: 50%; /* Makes it circular if desired */
+            max-width: 200px;
+            border: none !important; /* Remove any borders */
+            outline: none !important; /* Remove any outlines */
+            box-shadow: none !important; /* Remove any shadows */
+            background: transparent !important; /* Ensure transparent background */
+            border-radius: 0; /* Remove circular border if not needed, or keep 50% for circular */
             object-fit: contain;
+            display: block; /* Removes any inline spacing issues */
         }
-        
-        /* Specific sizes for different sections */
-        .memoji-hero img {
-            max-width: 250px; /* Larger for hero section */
-        }
-        
-        .work-memoji img {
-            max-width: 120px; /* Smaller for work section */
-        }
-        
-        .about-memoji img {
-            max-width: 180px; /* Medium size for about section */
-        }
-        
-        .contact-memoji img {
-            max-width: 150px; /* Size for contact section */
-        }
-    </style>
+
+```
+    /* Specific sizes for different sections */
+    .memoji-hero img {
+        max-width: 250px;
+    }
+    
+    .work-memoji img {
+        max-width: 120px;
+    }
+    
+    .about-memoji img {
+        max-width: 180px;
+    }
+    
+    .contact-memoji img {
+        max-width: 150px;
+    }
+
+    /* Ensure parent containers don't add boxes */
+    .memoji-hero,
+    .work-memoji,
+    .about-memoji,
+    .contact-memoji {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+```
+
 </head>
 <body>
     <!-- Hero Section -->
@@ -51,141 +73,144 @@
         </div>
     </section>
 
-    <!-- Work Experience -->
-    <section class="work-section">
-        <div class="container">
-            <div class="work-item">
-                <div>
-                    <div class="work-title">Developer</div>
-                    <div class="work-company">Independent Work</div>
-                </div>
-                <div class="work-memoji">
-                    <img src="IMG_5147.png" alt="11luke's Memoji" class="memoji-image">
-                </div>
+```
+<!-- Work Experience -->
+<section class="work-section">
+    <div class="container">
+        <div class="work-item">
+            <div>
+                <div class="work-title">Developer</div>
+                <div class="work-company">Independent Work</div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About me</h2>
-                    <p class="about-description">
-                        I'm a developer with a strong focus on developing bug-free smooth user experiences.
-                        Here is a little bit about languages and technologies, that I am currently using.
-                    </p>
-                    
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-label">Nailing</div>
-                            <div class="skill-name">Javascript</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label">Killing</div>
-                            <div class="skill-name">Typescript</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label">Mastering</div>
-                            <div class="skill-name">React.js</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label">Using</div>
-                            <div class="skill-name">Vue.js</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label">Loving</div>
-                            <div class="skill-name">Tailwind</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-label">Slaying</div>
-                            <div class="skill-name">Node.js</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-memoji">
-                    <img src="IMG_5147.png" alt="11luke's Memoji" class="memoji-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Personal projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution with real-time inventory management and secure payment processing.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Stripe</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Task Management App</h3>
-                    <p>A collaborative task management application with real-time updates and team communication features.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Socket.io</span>
-                        <span class="tech-tag">Tailwind</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Weather Dashboard</h3>
-                    <p>A data visualization dashboard displaying weather patterns using interactive charts and maps.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="contact-title">Contact Me</h2>
-            <p class="contact-subtitle">Ready to develop your next big thing?</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com">Email</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-            </div>
-            <div class="contact-memoji">
+            <div class="work-memoji">
                 <img src="IMG_5147.png" alt="11luke's Memoji" class="memoji-image">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 11luke. All Rights Reserved.</p>
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About me</h2>
+                <p class="about-description">
+                    I'm a developer with a strong focus on developing bug-free smooth user experiences.
+                    Here is a little bit about languages and technologies, that I am currently using.
+                </p>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-label">Nailing</div>
+                        <div class="skill-name">Javascript</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label">Killing</div>
+                        <div class="skill-name">Typescript</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label">Mastering</div>
+                        <div class="skill-name">React.js</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label">Using</div>
+                        <div class="skill-name">Vue.js</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label">Loving</div>
+                        <div class="skill-name">Tailwind</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-label">Slaying</div>
+                        <div class="skill-name">Node.js</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-memoji">
+                <img src="IMG_5147.png" alt="11luke's Memoji" class="memoji-image">
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- Projects Section -->
+<section class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Personal projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-stack e-commerce solution with real-time inventory management and secure payment processing.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Stripe</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Task Management App</h3>
+                <p>A collaborative task management application with real-time updates and team communication features.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Socket.io</span>
+                    <span class="tech-tag">Tailwind</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Weather Dashboard</h3>
+                <p>A data visualization dashboard displaying weather patterns using interactive charts and maps.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">D3.js</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">API</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <h2 class="contact-title">Contact Me</h2>
+        <p class="contact-subtitle">Ready to develop your next big thing?</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        </div>
+        <div class="contact-memoji">
+            <img src="IMG_5147.png" alt="11luke's Memoji" class="memoji-image">
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 11luke. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+```
+
 </body>
 </html>
